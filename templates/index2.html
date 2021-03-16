@@ -40,7 +40,7 @@
 	<!--
 	 Header Section -->
 	<header class="header-section">
-		<a href="index.html" class="site-logo">
+		<a href="{% url 'index' %}" class="site-logo">
 			<img src="{% static 'img/logo.png' %}" alt="">
 		</a>
 		<nav class="header-nav">
@@ -85,6 +85,7 @@
 	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
 	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 	<script src="{% static 'js/main.js' %}"></script>
+	<br><br><br><br><br><br><br><br>
 {% block body_block %}
 
 

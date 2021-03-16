@@ -188,14 +188,15 @@ def jobedit(request, pk, template_name='HSSapp/profile.html'):
 def chat(request, pk,template_name='HSSapp/chat.html'):
     user = get_object_or_404(Notification, pk=pk)
     form = Chatform(request.POST or None, instance=user)
-    customername = user.customername
-    name = user.name
-    message = form.cleaned_data(request)
+    # customername = user.customername
+    # name = user.name
+       
     if form.is_valid():
-        Chat(name=name, customername=customername, message=message)
-        return redirect('mypage')
-    print('nothing to do')
-    return render(request, template_name, {'form': form})
+        form.save()
+        # message = request.POST['message']
+        # Chat(name=name, customername=customername, message=message)
+        return redirect('chat')
+    # return render(request, template_name, {'form': form})
 
 
 class Profiledelete(DeleteView):

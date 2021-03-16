@@ -39,12 +39,12 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-		<a href="index.html" class="site-logo">
+		<a href="{% url 'index' %}" class="site-logo">
 			<img src="{% static 'img/logo.png' %}" alt="">
 		</a>
 		<nav class="header-nav">
 			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="{% url 'index' %}" class="active">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Buy</a></li>
 				<li><a href="#">Pages</a>

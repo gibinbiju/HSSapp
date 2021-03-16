@@ -13,6 +13,7 @@ urlpatterns = [
     path('login', views.loginview, name='login'),
     path('logout', views.logoutview, name='logout'),
     path('', lambda request: render(request, 'home.html'), name='home'),
+    path('index', lambda request: render(request, 'index.html'), name='index'),
     path('home', lambda request: render(request, 'home.html'), name='home'),
     path('mypage', views.mypagenotice, name='mypage'),
     path('search', views.search, name='search'),
@@ -28,6 +29,7 @@ urlpatterns = [
     path('notice2/<int:pk>',views.Notice.as_view(),name='notice2'),
     path('deletenotice/<int:pk>',views.Noticedelete.as_view(),name='deletenotice'),
     path('noticedelete/<int:pk>', views.noticedelete, name='deletenotice'),
+    path('chat/<int:pk>',views.chat,name='chat'),
 
 
 ]
